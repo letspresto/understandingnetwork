@@ -1,6 +1,6 @@
 MKR1000  
 scan network  
-MAC: F8:F0:5:F5:E6:75  
+MAC: F8:F0:05:F5:E6:75  
 Scanning available networks...  
 ** Scan Networks **  
 number of available networks:6  
