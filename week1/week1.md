@@ -12,6 +12,15 @@ number of available networks:6
 5) DIRECT-03-HP M377 LaserJet	Signal: -77 dBm	Encryption: WPA  
 
 ### Controller
+Button test wiht python & Rpi(python lib)  
+https://www.instagram.com/p/BYucsHgBm2z/?taken-by=sleepy_maker  
+  
+
+python socket test
+https://www.instagram.com/p/BYxSwtFhFSt/?taken-by=sleepy_maker
+  
+  
+Combine button code and socket code  
 https://www.instagram.com/p/BYzIdv0hEmx/?taken-by=sleepy_maker
   
 #### Problems
