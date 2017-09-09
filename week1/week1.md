@@ -1,11 +1,10 @@
-### MKR1000  
-#### Check MAC address with scannetwork sample code  
+### Check MAC address with scannetwork sample code  
 MAC: F8:F0:05:F5:E6:75  
 Scanning available networks...  
 ** Scan Networks **  
 number of available networks:6  
 
-### Controller
+### Raspberry Pi3
 Button test wiht python & Rpi(python lib)  
 https://www.instagram.com/p/BYucsHgBm2z/?taken-by=sleepy_maker  
   
