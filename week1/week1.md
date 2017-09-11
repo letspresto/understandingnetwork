@@ -4,7 +4,7 @@ Scanning available networks...
 ** Scan Networks **  
 number of available networks:6  
 
-### Raspberry Pi3
+### Raspberry Pi3 + buttons
 Button test wiht python & Rpi(python lib)  
 https://www.instagram.com/p/BYucsHgBm2z/?taken-by=sleepy_maker  
   
@@ -23,6 +23,15 @@ https://www.instagram.com/p/BYzIdv0hEmx/?taken-by=sleepy_maker
   
 2. When hit x button, the program closes socket connection. At the same time, the program gets error
 -->
+
+### Raspberry Pi3 + gamepad
+gamepad test  
+https://www.instagram.com/p/BY5eZnfBQ-g/?taken-by=sleepy_maker  
+  
+  
+game controller  
+https://www.instagram.com/p/BY59xENh6xZ/?taken-by=sleepy_maker
+
 
 ### Commands
 ```shell
