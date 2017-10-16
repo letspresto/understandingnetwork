@@ -10,8 +10,12 @@ The other is that proof of works requires so many users.(if the idea needs to cr
 In NYC, there so many free wifi spots. I think research how peoole use wifi spots is kind of interesting. There are a few points of view on that. Like security, which application people use, what kind of device people use etc.
 
 3. DNS
-I was asked about wordpress security's issues by a student. According to her, she got hacked almost 6 months ago. Then, I fixed her problems like delete files and data that a hacker made. After that, I changed her domain's info(A record and DNS).
-A company she is using for her domain isn't big as well as AWS, so it took much time to inform the info to the internet. At that time, I saw an interesting thing. It is how DNS info is broadcasted by the comapny. I thought the spread depends on servers' physiacl distance. However, according to this site(https://www.whatsmydns.net/#NS/rumexinaction.com), the spread didn't depend on the distance. It means some servers in the US got the info before servers in Europ got.
+I was asked about wordpress security's issues by a student. According to her, she got hacked almost 6 months ago. 
+Then, I fixed her problems like delete files and data that a hacker made. 
+After that, I changed her domain's info(A record and DNS).  
+A company she is using for her domain isn't big as well as AWS, so it took much time to inform the info to the internet.   
+At that time, I saw an interesting thing. It is how DNS info is broadcasted by the comapny. I thought the spread depends on servers' physiacl distance. 
+However, according to this site(https://www.whatsmydns.net/#NS/rumexinaction.com), the spread didn't depend on the distance. It means some servers in the US got the info before servers in Europ got.
 
 
 4. Social media's censorship
