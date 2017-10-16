@@ -7,7 +7,8 @@ One of the application's ideas might be a chat application because there are a c
 The other is that proof of works requires so many users.(if the idea needs to create own blockchain network for the app)
 
 2. Wifi sniffing
-In NYC, there so many free wifi spots. I think research how peoole use wifi spots is kind of interesting. There are a few points of view on that. Like security, which application people use, what kind of device people use etc.
+In NYC, there so many free wifi spots. I think research how peoole use wifi spots is kind of interesting.   
+There are a few points of view on that. Like security, which application people use, what kind of device people use etc.
 
 3. DNS
 I was asked about wordpress security's issues by a student. According to her, she got hacked almost 6 months ago. 
@@ -15,8 +16,13 @@ Then, I fixed her problems like delete files and data that a hacker made.
 After that, I changed her domain's info(A record and DNS).  
 A company she is using for her domain isn't big as well as AWS, so it took much time to inform the info to the internet.   
 At that time, I saw an interesting thing. It is how DNS info is broadcasted by the comapny. I thought the spread depends on servers' physiacl distance. 
-However, according to this site(https://www.whatsmydns.net/#NS/rumexinaction.com), the spread didn't depend on the distance. It means some servers in the US got the info before servers in Europ got.
+However, according to this site(https://www.whatsmydns.net/#NS/rumexinaction.com), the spread didn't depend on the distance.   
+It means some servers in the US got the info before servers in Europ got.
 
 
 4. Social media's censorship
-This came from No.3 case. As I told you, I thought Facebook just check that a link is working properly or not. But actually, seems that they have the list. So far in my understanding, they may use some commands which are related to check networking like nslookup. In addition, It might be useful to know how to remove a specific link from their list. Also comparing behavior of some social media that allow users to share a link with others. 
+This came from No.3 case. As I told you, I thought Facebook just check that a link is working properly or not.   
+But actually, seems that they have the list.  
+So far in my understanding, they may use some commands which are related to check networking like nslookup. 
+In addition, It might be useful to know how to remove a specific link from their list.   
+Also comparing behavior of some social media that allow users to share a link with others.   
