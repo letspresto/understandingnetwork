@@ -31,12 +31,11 @@ Also comparing behavior of some social media that allow users to share a link wi
 My final will be 3(main part) + 4(extra).  
 
 ### outline
-#### What DNS is
-#### What TTL is
-#### How they work
-#### How to setup own domain(What do we need when we want to use our own domain)
-#### Why facebook doesn't allow me to share the url with someone(guess)
-##### case 1 a domain got hacked
-##### case 2 a domain had a DNS issue
-#### How to solve this problem
-
+##### 1. What DNS is
+##### 2. What TTL is
+##### 3. How they work
+##### 4. How to setup own domain(What do we need when we want to use our own domain)
+##### 5. Why facebook doesn't allow me to share the url with someone(guess)
+###### 5.1. case 1 a domain got hacked
+###### 5.2.case 2 a domain had a DNS issue
+##### 6. How to solve this problem
