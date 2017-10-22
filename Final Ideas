@@ -26,3 +26,17 @@ But actually, seems that they have the list.
 So far in my understanding, they may use some commands which are related to check networking like nslookup. 
 In addition, It might be useful to know how to remove a specific link from their list.   
 Also comparing behavior of some social media that allow users to share a link with others.   
+
+
+My final will be 3(main part) + 4(extra).  
+
+### outline
+#### What DNS is
+#### What TTL is
+#### How they work
+#### How to setup own domain(What do we need when we want to use our own domain)
+#### Why facebook doesn't allow me to share the url with someone(guess)
+##### case 1 a domain got hacked
+##### case 2 a domain had a DNS issue
+#### How to solve this problem
+
