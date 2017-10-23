@@ -58,6 +58,9 @@ c8:5e:5e:9d:7a:52
 d1:d6:10:50:9b:78
 5c:c7:ef:a8:63:e5
 ```
+script
+https://github.com/orz-orz-orz-orz-orz/understandingnetwork/blob/master/week8/gen.js
+
 Step2 Install Spoof  
 
 ```shell
@@ -86,4 +89,10 @@ sudo spoof reset en0
 ```
 
 As you can see camouflaging Mac Address is super easy with a tool, however it causes a problem. In my case, I lost the connection to the internet. I guess the university's network system checks Mac Addresses.
+
+Before  
+![](https://github.com/orz-orz-orz-orz-orz/understandingnetwork/blob/master/week8/mac_address/before.png)
+  
+After  
+![After](https://github.com/orz-orz-orz-orz-orz/understandingnetwork/blob/master/week8/mac_address/after.png)
 
