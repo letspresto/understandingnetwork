@@ -21,6 +21,7 @@ I haven't gotten any data from wifi sniffing.
 What I've understand about this experiment.
 My tablet(Nexus7 2012) supports 2.4GHz and technically, running aircrack-ng on Android is possible if users can get root.  
 I can't use a tp-link wifi adapter and alpha wifi adapter for wifi sniffing because my tablet's can't recognize or supply enough power to wifi adapters.
+Still working on this.
 
 
 ## Simple Visualization with openFrameworks and NShey
@@ -34,7 +35,7 @@ A probe request is a special frame sent by a client station requesting informati
 ### What I did
 Get Mac Address and Signal Strength via NSHey and display those data and send them to openFrameworks with websocket.
 
-### How to visualize them
+### How to visualize
 ![](https://github.com/orz-orz-orz-orz-orz/understandingnetwork/blob/master/nshey.png)
 I'm using Mac Address to generate rgb colors(background and circle color) and signal strength is used as the circle's diameter.  
 Mac Address
