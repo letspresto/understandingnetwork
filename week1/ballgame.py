@@ -3,6 +3,14 @@ import socket
 import RPi.GPIO as GPIO
 import time
 
+GPIO.setmode(GPIO.BOARD)
+
+# left, right, up, down, and x
+button1 = 12
+button2 = 16
+button3 = 11
+button4 = 13
+button5 = 15
 
 def setupEnv():
     # socket
