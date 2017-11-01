@@ -59,6 +59,36 @@ $ lb datasource mongoDS --connector mongoDB
 
 Then, open common/itp.json change name from mongoDS -> db and delete data which is named db by loopbck.  
 
+### Create a model
+```shell
+$ lb model
+? Enter the model name: itp
+? Select the datasource to attach itp to: db (mongodb)
+? Select model's base class PersistedModel
+? Expose itp via the REST API? Yes
+? Custom plural form (used to build REST URL):
+? Common model or server only? common
+Let's add some itp properties now.
+
+Enter an empty property name when done.
+? Property name: name
+   invoke   loopback:property
+? Property type: string
+? Required? Yes
+? Default value[leave blank for none]:
+
+Let's add another itp property.
+Enter an empty property name when done.
+? Property name: year
+   invoke   loopback:property
+? Property type: string
+? Required? Yes
+? Default value[leave blank for none]:
+
+Let's add another itp property.
+Enter an empty property name when done.
+```
+
 ### Test loopback
 ```shell
 $ node .
@@ -70,4 +100,5 @@ Browse your REST API at http://localhost:3000/explorer
 Go to http://localhost:3000/explorer and Click itp and Add data with "Post" and check data with "Get".  
 
 
+### Authentication
 
