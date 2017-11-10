@@ -1,0 +1,42 @@
+{
+  "name": "room",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "boolean",
+      "required": true
+    },
+    "person": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "start": {
+      "type": "date"
+    },
+    "End": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
