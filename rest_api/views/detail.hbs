@@ -1,0 +1,101 @@
+ <div class="container">
+     <div class="row">
+         <div class="col-md-8 offset-md-2">
+             <h1>{{ pageTitle }}</h1>
+         </div>
+     </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 id="blog_title">{{data.title}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <p id="blog_content">{{data.content}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="btnBlock" class="col-md-8 offset-md-2">
+            
+            <a class="btn btn-lg btn-success" id="editBtn" onClick="edit()">Edit</a>
+            <a href="/list" class="btn btn-lg btn-danger" id="backBtn">Back</a>
+        </div>
+    </div>
+</div> 
+
+<script>
+    
+    
+    // click save -> save data
+    // click cancel -> not editable
+    function edit() {
+        //console.log("start edit");
+        var title = $("#blog_title").text();
+        var content = $("#blog_content").text();
+        //console.log("title: ", title);
+        // data -> editable
+        $("#blog_title").html('<input id="update_title" type="text" value="'+title+'" />');
+        $("#blog_content").html('<textarea id="update_content" row="4" cols="50">'+content+'</textarea>');
+
+        // button save|cancel
+        // get event
+        //var event = $("#editBtn").get(0).onclick;
+        $("#editBtn").unbind();
+        /*
+        $("#editBtn").on('click',function(){
+            hogehoge;
+        });
+        */
+        $("#editBtn").remove();
+        $("#backBtn").remove();
+        $("#btnBlock").append('<a class="btn btn-lg btn-success" id="saveBtn" onClick="save({{data.id}})">Save</a>');
+        $("#btnBlock").append('<a href="" class="btn btn-lg btn-danger" id="cancelBtn">Cancel</a>');
+
+    }
+
+    function save(id) {
+        // store data
+        var title = $("#update_title").val();;
+        var content = $("#update_content").val();
+        /*
+        console.log("save data");
+        console.log("id: ", id);
+        console.log("title: ",title);
+        console.log("content", content);
+        */
+        var data = {};
+        data.id = id;
+        data.title = title;
+        data.content = content;
+        $.ajax(
+            {
+                type: 'POST',
+                url: '/update',
+                dataType: 'json',
+                data: {
+                    "id": id,
+                    "title": title,
+                    "content": content
+                }
+				//contentType: "application/json"
+            })
+            .done(function(data) {
+				console.log(data);
+                $("#update_title").remove();
+                //html('<h2 id="blog_title">' + data.title + '</h2>');
+                $("#update_content").remove();
+                $("#blog_title").text(data.title);
+                $("#blog_content").text(data.content);
+                $("#saveBtn").remove();
+                $("#cancelBtn").remove();
+                $("#btnBlock").append('<a class="btn btn-lg btn-success" id="editBtn" onClick="edit()">Edit</a>');
+                $("#btnBlock").append('<a href="/list" class="btn btn-lg btn-danger" id="backBtn">Back</a>');
+			})
+			.fail(function(XMLHttpRequest, textStatus, errorThrown){
+			    console.log("fail");
+				console.log("first: ", XMLHttpRequest.status);
+    			console.log("second: ", textStatus);
+    			console.log("third: ", errorThrown.message);
+			});
+    }
+</script>

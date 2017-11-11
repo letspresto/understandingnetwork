@@ -1,0 +1,85 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<h1>{{ pageTitle }}</h1>
+			<h2>articles</h2>
+		</div>
+	</div>
+    <div class="row">
+	    <div class="col-md-8 offset-md-2">
+            <div class="table-responsive">
+			<table class="table table-striped" data-mobile-responsive="true">
+    			<thead>
+    				<tr>
+						<th>id</th>
+        				<th>title</th>
+        				<th>timestamp</th>
+    				</tr>
+				</thead>
+				<tbody>
+        		{{#each data}}
+    				<tr id="row-{{this.id}}">
+						<td><a href="/detail/{{this.id}}">{{this.id}}</a></td>
+        				<td><a href="/detail/{{this.id}}">{{this.title}}</a></td>
+        				<td>{{this.timestamp}}</td>
+						<td>
+							<a href="/detail/{{this.id}}" class="btn btn-large btn-block btn-success">detail</a>
+						</td>
+						<td>
+							<a class="btn btn-large btn-block btn-danger" onClick="deletePost({{this.id}})">delete</a>
+						</td>
+    				</tr>
+        		{{/each}}
+				<tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	// delete button alert
+	function deletePost(id) {
+		swal({
+			title: "Are you sure?",
+			text: "You will not be able to recover this post!",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#DD6B55",
+			confirmButtonText: "Yes, delete it!",
+			cancelButtonText: "No, cancel plx!",
+			closeOnConfirm: false,
+			closeOnCancel: false
+		},
+		function(isConfirm){
+			//console.log(isConfirm);
+			if(isConfirm) {
+				//var url = '/delete/' + id;
+				var data =  
+				$.ajax(
+					{
+						type: 'POST',
+						url: '/del/' + id,
+						contentType: "application/json"
+					})
+					.done(function(data) {
+						console.log(data);
+						var delRow = "#row-" + id;
+						$(delRow).remove();
+					})
+					.fail(function(XMLHttpRequest, textStatus, errorThrown){
+						console.log("fail");
+						console.log("first: ", XMLHttpRequest.status);
+    					console.log("second: ", textStatus);
+    					console.log("third: ", errorThrown.message);
+					});
+					swal("Deleted!", "Your post has been deleted.", "success");
+					
+					
+			} else {
+				swal("Cancelled", "Your post is safe :)", "error");
+			}
+		});
+	}
+</script>
