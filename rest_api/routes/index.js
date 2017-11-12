@@ -1,6 +1,7 @@
 const express = require('express')
 const info = require('../db')
 const mysql = require('mysql')
+const request = require("request");
 //const cors = require('cors')
 let router = express.Router()
 
@@ -12,17 +13,31 @@ const db = mysql.createConnection({
     database : info.database
 })
 
+
+//Query blockchain API
+request({
+    url: "http://blockchain.info/stats?format=json",
+    json: true
+}, function(error, response, body){
+        btcPrice = body.market_price_usd;
+        btcBlocks = body.n_blocks_total;
+        btcTime = body.minutes_between_blocks;
+});
+
 // GET
 router.get('/price', (req, res)=> {
     // return price
+    res.send("blockchain.info Price: " + btcPrice)
 })
 
 router.get('/blocks', (req, res)=> {
     // return height
+    res.send("Blockchain.info current block height: " + btcBlocks)
 })
 
 router.get('/minetime', (req, res)=> {
     // return mine-time
+    res.send("Blockchain.info current miningtime: " + btcTime)
 })
 
 router.get('/messages', (req, res)=> {
