@@ -1,6 +1,6 @@
 const express = require('express')
-const path = require('path')
-const hbs = require('express-handlebars')
+//const path = require('path')
+//const hbs = require('express-handlebars')
 const routes = require('./routes/index')
 const http = require('http')
 const bodyParser = require('body-parser')
@@ -9,20 +9,27 @@ var app = express()
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'))
-app.engine('hbs', hbs({extname: 'hbs', defaultLayout: "layout", layoutsDir: __dirname + '/views/layouts/'})) // extention hbs
-app.set('view engine', 'hbs')
+// handlebars
+// app.set('views', path.join(__dirname, 'views'))
+// app.engine('hbs', hbs({extname: 'hbs', defaultLayout: "layout", layoutsDir: __dirname + '/views/layouts/'})) // extention hbs
+// app.set('view engine', 'hbs')
 
 app.use(bodyParser.urlencoded({extended: true}))
 
 // url
 app.use('/', routes)
-app.use('/new', routes)
-app.use('/detail', routes)
-app.use('/list', routes)
+// api
+app.use('/price', routes)
+app.use('/blocks', routes)
+app.use('/mine-time', routes)
+// get 5 latest messages
+app.use('/messages', routes)
+//app.use('/new', routes)
+//app.use('/detail', routes)
+//app.use('/list', routes)
 
 
-app.set('port', (process.env.PORT || 3000))
+app.set('port', (process.env.PORT || 5000))
 
 
 // create http server
