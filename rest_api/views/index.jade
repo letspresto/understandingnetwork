@@ -8,14 +8,21 @@ block content
 		form(method: post)
 			div
 				div
-					span Blockchain Events:
-					br
 					br
 					a(href="/price")
-						button(type="button") Price
+						button(type="button" onclick="Price(#{price})") Price
+					h4 Current Price #{price} 
 					br
 					a(href="/blocks")
-						button(type="button") Blocks
+						button(type="button" onclick="Block(#{block})") Blocks
+					h4 Blocks Mined #{block} 
 					br
-					a(href="/mine-time")
-						button(type="button") Mining Time
+					a(href="/minetime")
+						button(type="button" onclick="Mine(#{mtime})") Mining Time
+					h4 Mining Time #{mtime} 
+					br
+					a(href="/messages")
+						button(type="button") Recent 5 Messages
+					br
+					a(href="/allmessages")
+						button(type="button") All Messages

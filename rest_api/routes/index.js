@@ -1,3 +1,7 @@
+exports.index = function(req, res){
+  res.render('index');
+};
+
 const express = require('express')
 const info = require('../db')
 const mysql = require('mysql')
@@ -27,17 +31,20 @@ request({
 // GET
 router.get('/price', (req, res)=> {
     // return price
-    res.send("blockchain.info Price: " + btcPrice)
+    // res.send("blockchain.info Price: " + btcPrice)
+    res.render('index.jade', {price: btcPrice})
 })
 
 router.get('/blocks', (req, res)=> {
     // return height
-    res.send("Blockchain.info current block height: " + btcBlocks)
+    // res.send("Blockchain.info current block height: " + btcBlocks)
+    res.render('index.jade', {block: btcBlocks})
 })
 
 router.get('/minetime', (req, res)=> {
     // return mine-time
-    res.send("Blockchain.info current miningtime: " + btcTime)
+    // res.send("Blockchain.info current miningtime: " + btcTime)
+    res.render('index.jade', {mtime: btcTime})
 })
 
 router.get('/messages', (req, res)=> {
