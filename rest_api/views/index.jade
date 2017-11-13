@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div.container
+		h1 GET
+
+	div.container
+		form(method: post)
+			div
+				div
+					span Blockchain Events:
+					br
+					br
+					a(href="/price")
+						button(type="button") Price
+					br
+					a(href="/blocks")
+						button(type="button") Blocks
+					br
+					a(href="/mine-time")
+						button(type="button") Mining Time
