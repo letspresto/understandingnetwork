@@ -7,22 +7,43 @@ block content
 	div.container
 		form(method: post)
 			div
-				div
+				div	 
 					br
-					a(href="/price")
-						button(type="button" onclick="Price(#{price})") Price
-					h4 Current Price #{price} 
+					h4 Current Price #{price}
+						a(href="/price")
+							button(type="button" onclick="Price(#{price})") Price	 
 					br
-					a(href="/blocks")
-						button(type="button" onclick="Block(#{block})") Blocks
 					h4 Blocks Mined #{block} 
+						a(href="/block")
+							button(type="button" onclick="Block(#{block})") Blocks	
 					br
-					a(href="/minetime")
-						button(type="button" onclick="Mine(#{mtime})") Mining Time
 					h4 Mining Time #{mtime} 
+						a(href="/minetime")
+							button(type="button" onclick="Mine(#{mtime})") Mining Time
 					br
-					a(href="/messages")
-						button(type="button") Recent 5 Messages
+					h4 Recent Messages
+						a(href="/messages")
+							button(type="button") Recent 5 Messages
 					br
-					a(href="/allmessages")
-						button(type="button") All Messages
+					h4 All Messages
+						a(href="/allmessages")
+							button(type="button") All Messages
+
+	div.container
+		h1 POST
+
+		form(method='POST')
+			p
+				| Message:
+				input(type='text', name='Message', value='')
+				br
+				br
+				|  Encryption Type:
+				br 
+				label None 
+					input(type='checkbox', name="None", checked)
+				label SHA1 
+					input(type='checkbox', name="SHA1")
+				label Language 
+					input(type='checkbox', name="Language")
+			input(type='submit', value='Submit')
